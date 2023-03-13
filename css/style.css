@@ -10,6 +10,16 @@ html, body {
     background-image: url(../imagens/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    animation: vento 3s ease-in-out alternate infinite;
+}
+
+@keyframes vento {
+    from {
+        background-position: 0% 1%;
+    }
+    to {
+        background-position: 1% 1%;
+    }
 }
 
 header {
