@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100vh;
+    background-image: url(../imagens/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    color: rgba(255, 255, 255, 0.74);
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2em;
+}
+nav {
+    display: flex;
+    
+}
