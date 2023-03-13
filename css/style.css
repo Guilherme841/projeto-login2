@@ -1,5 +1,24 @@
 @charset "UTF-8";
 
+@media screen and (min-width: 768px) {
+    html, body {
+        height: 100vh; 
+        background-image: url(../imagens/background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        animation: vento 1s ease-in-out alternate infinite;
+    }
+    
+    @keyframes vento {
+        from {
+            background-position: 0% 1%;
+        }
+        to {
+            background-position: 1% 1%;
+        }
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
