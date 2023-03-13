@@ -6,7 +6,7 @@
         background-image: url(../imagens/background.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        animation: vento 2s ease-in-out alternate infinite;
+        animation: vento 3s ease-in-out alternate infinite;
     }
     
     @keyframes vento {
