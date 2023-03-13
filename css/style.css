@@ -6,15 +6,15 @@
         background-image: url(../imagens/background.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        animation: vento 1s ease-in-out alternate infinite;
+        animation: vento 2s ease-in-out alternate infinite;
     }
     
     @keyframes vento {
         from {
-            background-position: 0% 1%;
+            background-position: 0% 0%;
         }
         to {
-            background-position: 1% 1%;
+            background-position: 3% 0%;
         }
     }
 }
@@ -34,10 +34,10 @@ html, body {
 
 @keyframes vento {
     from {
-        background-position: 0% 1%;
+        background-position: 0% 0%;
     }
     to {
-        background-position: 1% 1%;
+        background-position: 1% 0%;
     }
 }
 
