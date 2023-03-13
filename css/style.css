@@ -1,18 +1,21 @@
 @charset "UTF-8";
 
 @media screen and (min-width: 768px) {
-    html, body {
-        height: 100vh; 
+
+    html,
+    body {
+        height: 100vh;
         background-image: url(../imagens/background.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         animation: vento 3s ease-in-out alternate infinite;
     }
-    
+
     @keyframes vento {
         from {
             background-position: 0% 0%;
         }
+
         to {
             background-position: 2% 0%;
         }
@@ -24,8 +27,9 @@
     padding: 0;
 }
 
-html, body {
-    height: 100vh; 
+html,
+body {
+    height: 100vh;
     background-image: url(../imagens/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -36,6 +40,7 @@ html, body {
     from {
         background-position: 0% 0%;
     }
+
     to {
         background-position: 1% 0%;
     }
@@ -45,6 +50,7 @@ header {
     font-family: 'Bebas Neue', cursive;
     font-size: 2em;
 }
+
 nav {
     display: flex;
     justify-content: flex-end;
@@ -52,15 +58,15 @@ nav {
     padding: 10px;
 }
 
-div > a {
+div>a {
     text-decoration: none;
     color: none;
     background-color: none;
     color: rgba(255, 255, 255, 0.74);
     text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.692);
-} 
+}
 
-nav > div {
+nav>div {
     padding: 5px;
 }
 
