@@ -28,6 +28,7 @@
 }
 
 main {
+    display: flex;
     height: 100vh;
     background-image: url(../imagens/background.jpg);
     background-repeat: no-repeat;
@@ -61,7 +62,7 @@ nav {
     padding: 10px;
 }
 
-div > a  {
+div>a {
     text-decoration: none;
     color: none;
     background-color: none;
@@ -73,16 +74,12 @@ nav>div {
     padding: 5px;
 }
 
-nav > div:nth-child(1){
-  margin-right: auto;
-}
-
-main {
-    display: flex;
+nav>div:nth-child(1) {
+    margin-right: auto;
 }
 
 #containerLogin {
-    font-family: 'Ubuntu', sans-serif,Arial, Helvetica, sans-serif;
+    font-family: 'Ubuntu', sans-serif, Arial, Helvetica, sans-serif;
     color: rgba(255, 255, 255, 0.753);
     text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.637);
     font-weight: normal;
@@ -90,11 +87,42 @@ main {
     justify-content: center;
     align-items: center;
     margin: auto;
-    background-image: linear-gradient(-45deg,rgba(153, 240, 153, 0.24),rgba(255, 255, 255, 0.212));
+    background-image: linear-gradient(-45deg, rgba(153, 240, 153, 0.24), rgba(255, 255, 255, 0.212));
     padding: 10px;
     border-radius: 10px;
     backdrop-filter: blur(3px);
-    
+}
+
+input {
+    border: 0;
+    outline: 0;
+    padding: 10px 10px 0px;
+    font-size: .9em;
+    transition: 1s;
+}
+
+input:focus {
+    height: 35px;
+}
+
+.containerInput {
+    position: relative;
+    padding: 5px;
+}
+
+label {
+    font-size: .8em;
+    text-shadow: none;
+    color: rgb(65, 63, 63);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(16px, 10px);
+    pointer-events: none;
+}
+
+input:focus  + .placeholder {
+    font-size: .5em;
 }
 
 fieldset {
@@ -103,3 +131,23 @@ fieldset {
     backdrop-filter: blue(5px);
 }
 
+#iestado {
+    width: 100%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    color: rgba(255, 255, 255, 0.884);
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.322);
+    text-align: center;
+}
+
+footer>p {
+    font-family: 'Ubuntu', sans-serif, Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    backdrop-filter: blur(2px);
+    padding: 10px;
+}

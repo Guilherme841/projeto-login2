@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
-    <title>projeto-xxxxx</title>
+    <title>projeto-login2</title>
 </head>
 
 <body>
@@ -25,7 +25,7 @@
             <div><a href="#">CONTACT</a></div>
             <div><a href="#">WORK</a></div>
             <div><a href="#">LOGIN</a></div>
-            <div><a href="#">LOGOUT</a></div>
+            <!-- <div><a href="#">LOGOUT</a></div> -->
         </nav>
     </header>
     <main>
@@ -35,16 +35,17 @@
                     <legend>
                         <h1>Cadastro</h1>
                     </legend>
-                    <div>
-                        <input type="text" name="nome" id="primeiroNome" placeholder="Nome">
+                    <div class="containerInput">
+                        <input type="text" name="nome" id="primeiroNome">
+                        <label for="primeiroNome">Nome</label>
                     </div>
-                    <div>
+                    <div class="containerInput">
                         <input type="text" name="ultimoNome" id="ultimoNome" placeholder="Sobrenome">
                     </div>
-                    <div>
+                    <div class="containerInput">
                         <input type="text" name="email" id="iemail" placeholder="Email">
                     </div>
-                    <div>
+                    <div class="containerInput">
                         <select name="estado" id="iestado">
                             <optgroup label="Região Nordeste">
                                 <option value="AL">Alagoas</option>
@@ -85,21 +86,24 @@
                             </optgroup>
                         </select>
                     </div>
-                    <div>
+                    <div class="containerInput">
                         <input type="text" name="profissao" id="iprofissao" placeholder="Profissão">
                     </div>
-                    <div>
+                    <div class="containerInput">
                         <input type="text" name="data" id="idata" placeholder="Data de nascimento">
                     </div>
-                    <div>
-                        <input type="text" name="" id="">
+                    <div class="containerInput"> 
+                        <input type="text" name="telefone" id="itelefone" placeholder="Telefone">
+                    </div>
+                    <div class="containerInput">
+                        <input type="text" name="endereço" id="iendereço" placeholder="Endereço">
                     </div>
                 </fieldset>
             </form>
         </section>
     </main>
     <footer>
-
+        <p>&copy; Feito por Guilherme</p>
     </footer>
 </body>
 
