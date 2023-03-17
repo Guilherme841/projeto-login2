@@ -98,11 +98,9 @@ input {
     outline: 0;
     padding: 10px 10px 0px;
     font-size: .9em;
-    transition: 1s;
-}
-
-input:focus {
-    height: 35px;
+    height: 15px;
+    transition: .2s ease-in-out;
+    border-radius: 5px;
 }
 
 .containerInput {
@@ -119,10 +117,16 @@ label {
     left: 0;
     transform: translate(16px, 10px);
     pointer-events: none;
+    transition: 2s;
 }
 
 input:focus  + .placeholder {
     font-size: .5em;
+}
+
+select {
+    height: 28px;
+    border-radius: 5px;
 }
 
 fieldset {
