@@ -25,6 +25,7 @@
 * {
     margin: 0;
     padding: 0;
+
 }
 
 main {
@@ -91,9 +92,10 @@ nav>div:nth-child(1) {
     padding: 10px;
     border-radius: 10px;
     backdrop-filter: blur(3px);
+    box-sizing: border-box;
 }
 
-input {
+.inputs {
     border: 0;
     outline: 0;
     padding: 10px 10px 0px;
@@ -106,6 +108,7 @@ input {
 .containerInput {
     position: relative;
     padding: 5px;
+    box-sizing: border-box;
 }
 
 label {
@@ -125,30 +128,37 @@ input:focus  + .placeholder {
 }
 
 select {
-    height: 28px;
+    height: 25px;
     border-radius: 5px;
+    border: 0;
+    outline: 0;
 }
 
 fieldset {
     padding: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.090);
+    border: 0;
     backdrop-filter: blue(5px);
+    box-sizing: border-box;
 }
 
 #iestado {
+    border: 0;
+    outline: 0;
+    font-size: .9em;
     width: 100%;
+    transition: .2s ease-in-out;
+    border-radius: 5px;
 }
 
 footer {
-    position: absolute;
     bottom: 0;
-    color: rgba(255, 255, 255, 0.884);
+    background-color: black;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.322);
     text-align: center;
 }
 
 footer>p {
+    color: white;
     font-family: 'Ubuntu', sans-serif, Arial, Helvetica, sans-serif;
     font-style: italic;
     font-weight: bold;

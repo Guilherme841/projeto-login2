@@ -1,4 +1,4 @@
-const inputs = document.querySelectorAll("input[type='text']");
+const inputs = document.querySelectorAll(".inputs");
 const arrInputs = Array.from(inputs);
 console.log(arrInputs);
 
