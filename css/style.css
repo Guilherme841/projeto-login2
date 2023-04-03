@@ -117,7 +117,7 @@ label {
 }
 
 .containerInput:focus-within .inputs {
-    border-color: black;
+    
 }
 
 select {
