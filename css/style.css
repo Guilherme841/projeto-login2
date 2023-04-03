@@ -6,7 +6,7 @@
 
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
 
     html,
     body {
@@ -26,7 +26,7 @@
             background-position: 2% 0%;
         }
     }
-}
+} */
 
 main {
     display: flex;
@@ -34,9 +34,9 @@ main {
     background-image: url(../imagens/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    animation: vento 3s ease-in-out alternate infinite;
+    /* animation: vento 3s ease-in-out alternate infinite; */
 }
-
+/* 
 @keyframes vento {
     from {
         background-position: 0% 0%;
@@ -45,7 +45,7 @@ main {
     to {
         background-position: 1% 0%;
     }
-}
+} */
 
 header {
     font-family: 'Bebas Neue', cursive, Arial, Helvetica, sans-serif;
@@ -98,31 +98,26 @@ nav>div:nth-child(1) {
 .inputs {
     border: 0;
     outline: 0;
-    padding: 10px 10px 0px;
-    font-size: .9em;
-    height: 15px;
-    transition: .2s ease-in-out;
-    border-radius: 5px;
-}
-
-.containerInput {
-    position: relative;
-    padding: 5px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    background-color: transparent;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
 }
 
 label {
-    font-size: .8em;
-    text-shadow: none;
-    color: rgb(65, 63, 63);
+    color: rgb(82, 255, 189);
     position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(16px, 10px);
-    pointer-events: none;
+    transform: translateY(-25px);
+    transition: .5s;
+    transition-timing-function: ease-in-out;
 }
 
-input:focus  + .placeholder {
-    font-size: .5em;
+.containerInput:focus-within label {
+    transform: translateY(-42px);
+}
+
+.containerInput:focus-within .inputs {
+    border-color: black;
 }
 
 select {
@@ -132,8 +127,17 @@ select {
     outline: 0;
 }
 
+.containerInput {
+    position: relative;
+    padding: 18px;
+}
+
+.containerInput:nth-child(1) {
+    margin-top: 40px;
+}
+
 fieldset {
-    padding: 10px;
+    padding: 10px 10px 10px 10px;
     border: 0;
     backdrop-filter: blue(5px);
 }
@@ -184,3 +188,4 @@ footer>p {
     backdrop-filter: blur(2px);
     padding: 10px;
 }
+

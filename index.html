@@ -36,16 +36,36 @@
                         <h1>Cadastro</h1>
                     </legend>
                     <div class="containerInput">
-                        <input type="text" class="inputs" name="nome" id="primeiroNome" required>
-                        <label for="primeiroNome">Nome</label>
+                        <div class="my-div">
+                            <div>
+                                <input type="text" class="inputs" name="nome" id="primeiroNome" required>
+                            </div>
+                            <label for="primeiroNome" id="nome2">Nome</label>
+                        </div>
                     </div>
                     <div class="containerInput">
-                        <input type="text" class="inputs" name="ultimoNome" id="ultimoNome" required>
+                        <div><input type="text" class="inputs" name="ultimoNome" id="ultimoNome" required></div>
                         <label for="ultimoNome">Sobrenome</label>
                     </div>
                     <div class="containerInput">
-                        <input type="text" class="inputs" name="email" id="iemail" required>
+                        <div><input type="text" class="inputs" name="email" id="iemail" required></div>
                         <label for="iemail">Email</label>
+                    </div>
+                    <div class="containerInput">
+                        <div><input type="text" class="inputs" name="profissao" id="iprofissao" required></div>
+                        <label for="iprofissao">Profissão</label>
+                    </div>
+                    <div class="containerInput">
+                        <div><input type="text" class="inputs" name="data" id="idata" required></div>
+                        <label for="idata">Data de nascimento</label>
+                    </div>
+                    <div class="containerInput">
+                        <div><input type="text" class="inputs" name="telefone" id="itelefone" required></div>
+                        <label for="itelefone">Telefone</label>
+                    </div>
+                    <div class="containerInput">
+                        <div><input type="text" class="inputs" name="endereço" id="iendereço" required></div>
+                        <label for="iendereço">Endereço</label>
                     </div>
                     <div class="containerInput">
                         <select name="iestado" id="iestado">
@@ -87,22 +107,6 @@
                                 <option value="TO">Tocantins</option>
                             </optgroup>
                         </select>
-                    </div>
-                    <div class="containerInput">
-                        <input type="text" class="inputs" name="profissao" id="iprofissao" required>
-                        <label for="iprofissao">Profissão</label>
-                    </div>
-                    <div class="containerInput">
-                        <input type="text" class="inputs" name="data" id="idata" required>
-                        <label for="idata">Data de nascimento</label>
-                    </div>
-                    <div class="containerInput">
-                        <input type="text" class="inputs" name="telefone" id="itelefone" required>
-                        <label for="itelefone">Telefone</label>
-                    </div>
-                    <div class="containerInput">
-                        <input type="text" class="inputs" name="endereço" id="iendereço" required>
-                        <label for="iendereço">Endereço</label>
                     </div>
                     <input type="submit" value="Enviar">
                 </fieldset>
