@@ -113,7 +113,7 @@ label {
 }
 
 .containerInput:focus-within label {
-    transform: translateY(-42px);
+    /* transform: translateY(-42px); */
 }
 
 .containerInput:focus-within .inputs {
