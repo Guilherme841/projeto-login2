@@ -38,36 +38,36 @@
                     <div class="containerInput">
                         <div class="my-div">
                             <div>
-                                <input type="text" class="inputs" name="nome" id="primeiroNome" required>
+                                <input type="text" class="inputs" name="nome" id="primeiroNome" required autocomplete="disable">
                             </div>
                             <label for="primeiroNome" id="nome2">Nome</label>
                         </div>
                     </div>
                     <div class="containerInput">
-                        <div><input type="text" class="inputs" name="ultimoNome" id="ultimoNome" required></div>
+                        <div><input type="text" class="inputs" name="ultimoNome" id="ultimoNome" required autocomplete="disable"></div>
                         <label for="ultimoNome">Sobrenome</label>
                     </div>
                     <div class="containerInput">
-                        <div><input type="text" class="inputs" name="email" id="iemail" required></div>
+                        <div><input type="text" class="inputs" name="email" id="iemail" required autocomplete="disable" pattern="[a-zA-z]{1,}[0-9_.-]?[@][a-zA-Z]{1,}[.][a-zA-Z]{1,}"></div>
                         <label for="iemail">Email</label>
                     </div>
                     <div class="containerInput">
-                        <div><input type="text" class="inputs" name="profissao" id="iprofissao" required></div>
+                        <div><input type="text" class="inputs" name="profissao" id="iprofissao" required autocomplete="disable"></div>
                         <label for="iprofissao">Profissão</label>
                     </div>
                     <div class="containerInput">
-                        <div><input type="text" class="inputs" name="data" id="idata" required></div>
+                        <div><input type="text" class="inputs" name="data" id="idata" required autocomplete="disable" ></div>
                         <label for="idata">Data de nascimento</label>
                     </div>
                     <div class="containerInput">
-                        <div><input type="text" class="inputs" name="telefone" id="itelefone" required></div>
+                        <div><input type="text" class="inputs" name="telefone" id="itelefone" required autocomplete="disable" pattern="\d{2,3}[-]?\d{4,5}[-]?\d{4}"></div>
                         <label for="itelefone">Telefone</label>
                     </div>
                     <div class="containerInput">
-                        <div><input type="text" class="inputs" name="endereço" id="iendereço" required></div>
-                        <label for="iendereço">Endereço</label>
+                        <div><input type="text" class="inputs" name="endereço" id="iendereço" required autocomplete="disable"></div>
+                        <label for="iendereço">Rua</label>
                     </div>
-                    <div class="containerInput">
+                    <div class="containerInput" id="containerSelect">
                         <select name="iestado" id="iestado">
                             <optgroup label="Região Nordeste">
                                 <option value="AL">Alagoas</option>
