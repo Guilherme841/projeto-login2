@@ -1,0 +1,47 @@
+@media screen and (min-width: 768px) {
+    fieldset {
+        columns: 2;
+    }
+    h1 {
+        font-size: 2.2em;
+    }
+    .inputs {
+        font-size: 1.2em;
+    }
+    label {
+        font-size: 1.1em;
+    }
+    #containerSenha {
+        position: relative;
+        display: block;
+    }
+
+    #iestado {
+        font-size: 1.2em;
+    }
+    
+    #ipass {
+        width: 214px;
+    }
+    
+    #ipass:focus+#mostrarSenha {
+        border-bottom: 2px solid rgb(95, 255, 135);
+    }
+    
+    #mostrarSenha {
+        position: absolute;
+        right: 0;
+        transition: .5s;
+        border-bottom: 2px solid white;
+        padding-bottom: 3px;
+        padding-left: 10px;
+        color: rgb(107, 182, 107);
+        cursor: pointer;
+    }
+
+    input[type="submit"] {
+        width: 150px;
+        padding: 10px;
+        font-size: 1.1em;
+    }
+}
