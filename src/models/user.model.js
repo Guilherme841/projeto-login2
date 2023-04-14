@@ -5,7 +5,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         require: true,
     },
-    sobrenome: {
+    ultimoNome: {
         type: String,
         require: true,
     },
@@ -13,7 +13,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         require: true,
     },
-    senha: {
+    pass: {
         type: String,
         require: true,
     },
@@ -21,7 +21,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         require: true,
     },
-    nascimento: {
+    data: {
         type: String,
         require: true,
     },
@@ -29,7 +29,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         require: true,
     },
-    estado: {
+    iestado: {
         type: String,
         require: true,
     },
