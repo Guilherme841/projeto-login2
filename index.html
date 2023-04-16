@@ -15,8 +15,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-        <link rel="stylesheet" href="css/media-query.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="css/media-query.css">
     <title>projeto-login2</title>
 </head>
 
@@ -32,88 +33,25 @@
     </header>
     <main>
         <section id="containerLogin">
-            <form id="containerForm" action="http://localhost:5500/users" method="post">
+            <!-- action="http://localhost:5500/users" -->
+            <form id="containerForm" action="http://localhost:5500/login" method="post">
                 <fieldset>
                     <legend>
-                        <h1>Cadastro</h1>
+                        <h1>Login</h1>
                     </legend>
-                    <div class="containerInput" id="containerInput1">
-                        <div class="my-div">
-                            <div>
-                                <input type="text" class="inputs" name="nome" id="primeiroNome" required autocomplete="disable">
-                            </div>
-                            <label for="primeiroNome" id="nome2">Nome</label>
-                        </div>
-                    </div>
                     <div class="containerInput">
-                        <div><input type="text" class="inputs" name="ultimoNome" id="ultimoNome" required autocomplete="disable"></div>
-                        <label for="ultimoNome">Sobrenome</label>
-                    </div>
-                    <div class="containerInput">
-                        <div><input type="text" class="inputs" name="email" id="iemail" required autocomplete="disable" pattern="[a-zA-z]{1,}[0-9_.-]?[@][a-zA-Z]{1,}[.][a-zA-Z]{1,}"></div>
+                        <div><input type="text" class="inputs" name="email" id="iemail" required autocomplete="disable"
+                                pattern="[a-zA-z]{1,}[0-9_.-]?[@][a-zA-Z]{1,}[.][a-zA-Z]{1,}"></div>
                         <label for="iemail">Email</label>
                     </div>
                     <div class="containerInput">
-                        <div><input type="text" class="inputs" name="profissao" id="iprofissao" required autocomplete="disable"></div>
-                        <label for="iprofissao">Profissão</label>
-                    </div>
-                    <div class="containerInput">
-                        <div><input type="text" class="inputs" name="data" id="idata" required autocomplete="disable"  maxlength="10"></div>
-                        <label for="idata">Data de nascimento</label>
-                    </div>
-                    <div class="containerInput">
-                        <div><input type="text" class="inputs" name="telefone" id="itelefone" required autocomplete="disable" pattern="\d{2,3}[-]?\d{4,5}[-]?\d{4}"></div>
-                        <label for="itelefone">Telefone</label>
-                    </div>
-                    <div class="containerInput">
-                        <div id="containerSenha"><input type="password" name="pass" id="ipass" class="inputs"><span class="material-symbols-outlined" id="mostrarSenha">
-                            visibility_off
+                        <div id="containerSenha"><input type="password" name="pass" id="ipass" class="inputs"><span
+                                class="material-symbols-outlined" id="mostrarSenha">
+                                visibility_off
                             </span></div>
                         <label for="ipass">Senha</label>
                     </div>
-                    <div class="containerInput" id="containerSelect">
-                        <select name="iestado" id="iestado">
-                            <optgroup label="Região Nordeste">
-                                <option value="AL">Alagoas</option>
-                                <option value="BA">Bahia</option>
-                                <option value="CE">Ceará</option>
-                                <option value="MA">Maranhão</option>
-                                <option value="PB">Paraíba</option>
-                                <option value="PE">Pernambuco</option>
-                                <option value="PI">Piauí</option>
-                                <option value="RN">Rio Grande do Norte</option>
-                                <option value="SE">Sergipe</option>
-                            </optgroup>
-                            <optgroup label="Região Sudeste">
-                                <option value="ES">Espírito Santo</option>
-                                <option value="MG">Minas Gerais</option>
-                                <option value="RJ">Rio de Janeiro</option>
-                                <option value="SP" selected>São Paulo</option>
-                            </optgroup>
-                            <optgroup label="Região Sul">
-                                <option value="PR">Paraná</option>
-                                <option value="RS">Rio Grande do Sul</option>
-                                <option value="SC">Santa Catarina</option>
-                            </optgroup>
-                            <optgroup label="Região Centro-Oeste">
-                                <option value="DF">Distrito Federal</option>
-                                <option value="GO">Goiás</option>
-                                <option value="MT">Mato Grosso</option>
-                                <option value="MS">Mato Grosso do Sul</option>
-                            </optgroup>
-                            <optgroup label="Região Norte">
-                                <option value="AC">Acre</option>
-                                <option value="AM">Amazonas</option>
-                                <option value="AP">Amapá</option>
-                                <option value="PA">Pará</option>
-                                <option value="RO">Rondônia</option>
-                                <option value="RR">Roraima</option>
-                                <option value="TO">Tocantins</option>
-                            </optgroup>
-                        </select>
-                    </div>
-                </fieldset>
-                <input type="submit" value="Enviar">
+                    <input type="submit" value="Enviar">
             </form>
         </section>
     </main>

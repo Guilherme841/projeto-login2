@@ -1,9 +1,20 @@
+const jwt = require('jsonwebtoken');
 const express = require("express");
 const bodyParser = require("body-parser");
 const UserModel = require("../src/models/user.model");
+require("dotenv").config()
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.get("/cadastrado", async (req, res) => {
+  try {
+    const users = await UserModel.find({});
+    res.status(200).json(users);
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+})
 
 app.post("/users", async (req, res) => {
   try {
@@ -25,8 +36,31 @@ app.post("/users", async (req, res) => {
   }
 });
 
+app.post("/login", async (req, res) => {
+  try {
+    const { email, pass } = req.body;
+
+    const user = await UserModel.findOne({ email });
+
+    if (!user) {
+      return res.status(401).send("Email ou senha inválidos");
+    }
+
+    if (user.pass !== pass) {
+      return res.status(401).send("Email ou senha inválidos");
+    }
+
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
+    // res.status(200).json({ token });
+    res.redirect('http://localhost:5500/cadastrado');
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+});
+
 const port = 5500;
 
 app.listen(port, () => {
   console.log(`Rodando com express na porta ${port}!`);
 });
+
