@@ -35,23 +35,7 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-const authSchema = new mongoose.Schema({
-  email: {
-    type: String,
-    required: true,
-  },
-  pass: {
-    type: String,
-    required: true,
-  },
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "User"
-  }
-});
-
 const UserModel = mongoose.model("user", userSchema);
-const authModel = mongoose.model("auth", authSchema);
 
 module.exports = UserModel;
-module.exports = authModel;
+
