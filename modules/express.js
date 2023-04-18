@@ -52,8 +52,6 @@ app.post("/login", async (req, res) => {
   }
 });
 
-const 
-
 const port = 5500;
 
 app.listen(port, () => {
