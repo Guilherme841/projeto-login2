@@ -5,6 +5,7 @@ const bcrypt = require("bcrypt");
 const path = require("path")
 const cookieParser = require("cookie-parser")
 const UserModel = require("../src/models/user.model");
+const passport = require('passport')
 require("dotenv").config();
 
 const app = express();
@@ -16,27 +17,26 @@ app.use(cookieParser());
 //   res.send("Logado com sucesso!")
 // });
 
-app.use((req, res, next) => {
-  const token = req.cookies.token; // Obtém o token do cookie
-
-  if (token) {
-    jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
-      if (err) {
-        console.log("token Invalido")
-        next();
-      } else {
-        // Token válido, definir informações de autenticação no objeto de solicitação (req)
-        console.log("token valido")
-        req.user = decoded;
-        res.sendFile(path.join(__dirname, "../logado.html"));
-      }
-    });
-  } else {
-    // Nenhum token encontrado, continuar sem autenticação
-    console.log("Nenhum token encontrado!")
-    next();
-  }
-});
+// app.use((req, res, next) => {
+//   const token = req.cookies.token; // Obtém o token do cookie
+//   if (token) {
+//     jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+//       if (err) {
+//         console.log("token Invalido")
+//         next();
+//       } else {
+//         // Token válido, definir informações de autenticação no objeto de solicitação (req)
+//         console.log("token valido")
+//         req.user = decoded;
+//         res.sendFile(path.join(__dirname, "../logado.html"));
+//       }
+//     });
+//   } else {
+//     // Nenhum token encontrado, continuar sem autenticação
+//     console.log("Nenhum token encontrado!")
+//     next();
+//   }
+// });
 
 app.post("/users", async (req, res) => {
   try {
@@ -87,7 +87,10 @@ app.post("/login", async (req, res) => {
 
     if (!sincPass) {
       return res.status(401).send("Email ou senha inválidos");
+    } else {
+      res.sendFile(path.join(__dirname, "../logado.html"));
     }
+
   } catch (error) {
     res.status(500).send(error.message);
   }

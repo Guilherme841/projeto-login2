@@ -5,6 +5,7 @@ const arrLabel = Array.from(label);
 const data = document.getElementById("idata");
 const ipass = document.getElementById("ipass");
 const mostrarSenha = document.getElementById("mostrarSenha");
+const sim = document.getElementById("sim");
 
 mostrarSenha.addEventListener("click", function () {
   if (ipass.type === "password") {
@@ -28,3 +29,7 @@ for (let e of arrInputs) {
     }
   });
 }
+
+sim.addEventListener("click", function() {
+  document.cookie = "tokenDoDom=tokenDeLoginDoUsuario";
+})
