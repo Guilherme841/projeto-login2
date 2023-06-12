@@ -33,6 +33,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  token: {
+    type: String,
+    require: true
+  }
 });
 
 const UserModel = mongoose.model("user", userSchema);

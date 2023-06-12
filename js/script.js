@@ -6,6 +6,9 @@ const data = document.getElementById("idata");
 const ipass = document.getElementById("ipass");
 const mostrarSenha = document.getElementById("mostrarSenha");
 const sim = document.getElementById("sim");
+let token2 = "token fake"
+
+localStorage.setItem("token2", token2)
 
 mostrarSenha.addEventListener("click", function () {
   if (ipass.type === "password") {
@@ -29,7 +32,3 @@ for (let e of arrInputs) {
     }
   });
 }
-
-sim.addEventListener("click", function() {
-  document.cookie = "tokenDoDom=tokenDeLoginDoUsuario";
-})
