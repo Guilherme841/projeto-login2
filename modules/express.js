@@ -5,22 +5,16 @@ const bcrypt = require("bcrypt");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const UserModel = require("../src/models/user.model");
-const session = require("express-session");
-const passport = require("passport");
 require("dotenv").config();
+// const Cookies = require('js-cookie');
+// const Cookies = require("universal-cookie");
+// const session = require("express-session");
+// const passport = require("passport");
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname)));
 app.use(cookieParser());
-
-// app.use(
-//   session({
-//     secret: "Chave",
-//     resave: false,
-//     saveUninitialized: false,
-//   })
-// );
 
 app.post("/users", async (req, res) => {
   try {
@@ -38,13 +32,11 @@ app.post("/users", async (req, res) => {
       data: req.body.data,
       telefone: req.body.telefone,
       iestado: req.body.iestado,
-      token: null,
     });
 
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
-    user.token = token;
-    await user.save();
-    res.cookie("token", token, { secure: true, httpOnly: true });
+    res.setHeader("Set-Cookie", `token=${token}; HttpOnly`);
+    res.cookie('token', token, { secure: false, httpOnly: false, path: "/" });
     res.sendFile(path.join(__dirname, "../logado.html"));
   } catch (error) {
     res.status(500).send(error.message);

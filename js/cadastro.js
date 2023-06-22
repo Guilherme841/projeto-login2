@@ -11,6 +11,16 @@ const mes = String(date.getMonth()).padStart(2, + "0");
 const dia = String(date.getDate()).padStart(2, + "0");
 const dataFull = `${dia}/${mes}/${ano}`;
 
+window.addEventListener("pageshow", function () {
+  for (let elemento of arrInputs) {
+    let input = elemento;
+    if (input.value) {
+      let inputWithValue = this.document.querySelector(`label[for="${input.id}"]`);
+      inputWithValue.style.transform = "translateY(-50px)"
+    }
+  }
+});
+
 mostrarSenha.addEventListener("click", function () {
   if (ipass.type === "password") {
     ipass.type = "text";

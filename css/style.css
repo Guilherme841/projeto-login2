@@ -9,11 +9,10 @@
 
 main {
     display: flex;
-    height: 100vh;
     background-image: url(../imagens/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 40px;
+    padding: 80px;
 }
 
 header {
@@ -113,7 +112,7 @@ optgroup {
 }
 
 .containerInput:nth-child(1) {
-    margin-top: 40px;
+   
 }
 
 fieldset {
@@ -202,4 +201,14 @@ footer>p {
 #containerCookie {
     padding: 10px;
 
+}
+
+.inputs:-webkit-autofill {
+    background-color: white; /* Defina a cor de fundo desejada */
+    transition: background-color 5000s ease-in-out 0s; /* Adicione uma transição de plano de fundo para suavizar a alteração */
+}
+  
+.inputs:-moz-autofill {
+    background-color: white; /* Defina a cor de fundo desejada */
+    transition: background-color 5000s ease-in-out 0s; /* Adicione uma transição de plano de fundo para suavizar a alteração */
 }

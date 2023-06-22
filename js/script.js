@@ -6,17 +6,25 @@ const data = document.getElementById("idata");
 const ipass = document.getElementById("ipass");
 const mostrarSenha = document.getElementById("mostrarSenha");
 const sim = document.getElementById("sim");
-let token2 = "token fake"
+const tokenStorage = localStorage.getItem("tokenStorage");
 
-localStorage.setItem("token2", token2)
+window.addEventListener("pageshow", function () {
+  for (let elemento of arrInputs) {
+    let input = elemento;
+    if (input.value) {
+      let inputWithValue = this.document.querySelector(`label[for="${input.id}"]`);
+      inputWithValue.style.transform = "translateY(-50px)"
+    }
+  }
+});
 
 mostrarSenha.addEventListener("click", function () {
   if (ipass.type === "password") {
     ipass.type = "text";
-    mostrarSenha.textContent = "visibility"
+    mostrarSenha.textContent = "visibility";
   } else {
     ipass.type = "password";
-    mostrarSenha.textContent = "visibility_off"
+    mostrarSenha.textContent = "visibility_off";
   }
 });
 
