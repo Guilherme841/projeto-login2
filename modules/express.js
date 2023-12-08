@@ -36,7 +36,7 @@ app.post("/users", async (req, res) => {
 
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
     res.setHeader("Set-Cookie", `token=${token}; HttpOnly`);
-    res.cookie('token', token, { secure: false, httpOnly: false, path: "/" });
+    res.cookie("token", token, { secure: false, httpOnly: false, path: "/" });
     res.sendFile(path.join(__dirname, "../logado.html"));
   } catch (error) {
     res.status(500).send(error.message);
@@ -47,16 +47,12 @@ app.post("/users", async (req, res) => {
 app.post("/login", async (req, res) => {
   try {
     const { email, pass } = req.body;
-
     const user = await UserModel.findOne({ email });
-
     if (!user) {
       // return console.log("Credencias inválidas!")
       return res.status(401).send("Email ou senha inválidos");
     }
-
     const sincPass = await bcrypt.compare(pass, user.pass);
-
     if (!sincPass) {
       // return console.log("Credencias inválidas!")
       return res.status(401).send("Email ou senha inválidos");
